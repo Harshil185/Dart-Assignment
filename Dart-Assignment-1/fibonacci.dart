@@ -8,18 +8,15 @@ Following things should be covered in the program.
 import 'dart:io';
 
 void main() {
-  // Taking term number from the user as input
   print('Enter the number of terms:');
   int terms = int.parse(stdin.readLineSync()!);
 
-  // Generate and print Fibonacci series up to the term number
   print('Fibonacci series up to $terms terms:');
   for (int i = 0; i < terms; i++) {
     print('${fibonacci(i)}');
   }
 }
 
-// Function to calculate Fibonacci number at a given position
 int fibonacci(int n) {
   if (n <= 1) {
     return n;

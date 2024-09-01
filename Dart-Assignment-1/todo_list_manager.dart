@@ -18,7 +18,6 @@ void main() {
   String choice;
 
   do {
-    // Display menu options
     print('\nTo-Do List Manager');
     print('a. Add Task');
     print('b. Mark Task as Completed');
@@ -50,7 +49,6 @@ void main() {
   } while (choice != 'e');
 }
 
-// Function to add a task
 void addTask(List<Task> tasks) {
   print('Enter the task description:');
   String description = stdin.readLineSync()!;
@@ -58,7 +56,6 @@ void addTask(List<Task> tasks) {
   print('Task added: $description');
 }
 
-// Function to mark a task as completed
 void markTaskAsCompleted(List<Task> tasks) {
   viewTasks(tasks);
   if (tasks.isEmpty) return;
@@ -74,7 +71,6 @@ void markTaskAsCompleted(List<Task> tasks) {
   }
 }
 
-// Function to view all tasks
 void viewTasks(List<Task> tasks) {
   if (tasks.isEmpty) {
     print('No tasks available.');
@@ -88,7 +84,6 @@ void viewTasks(List<Task> tasks) {
   }
 }
 
-// Function to remove a task
 void removeTask(List<Task> tasks) {
   viewTasks(tasks);
   if (tasks.isEmpty) return;
@@ -104,7 +99,6 @@ void removeTask(List<Task> tasks) {
   }
 }
 
-// Task class to represent a to-do task
 class Task {
   String description;
   bool completed;

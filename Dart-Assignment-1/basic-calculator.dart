@@ -10,18 +10,16 @@ program.
 import 'dart:io';
 
 void main() {
-  // Taking 2 numbers from the user as input
+  
   print('Enter the first number:');
   double num1 = double.parse(stdin.readLineSync()!);
 
   print('Enter the second number:');
   double num2 = double.parse(stdin.readLineSync()!);
 
-  // Provide operator selection
   print('Select an operator (+, -, *, /):');
   String operator = stdin.readLineSync()!;
 
-  // Perform the operation and print the answer based on selected operator
   double result;
   switch (operator) {
     case '+':

@@ -18,17 +18,15 @@ and print the actual grade.
 import 'dart:io';
 
 void main() {
-  // Prompt the user to enter marks
+
   print('Enter your marks (between 1 and 100):');
   int marks = int.parse(stdin.readLineSync()!);
 
-  // Validate the input
   if (marks < 1 || marks > 100) {
     print('Invalid input. Marks should be between 1 and 100.');
     return;
   }
 
-  // Determine the grade based on the marks
   String grade;
   if (marks >= 90) {
     grade = 'A';
@@ -43,7 +41,6 @@ void main() {
   } else {
     grade = 'F';
   }
-
-  // Print the actual grade
+  
   print('Your grade is: $grade');
 }

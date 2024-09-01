@@ -18,7 +18,6 @@ import 'dart:io';
 import 'dart:math';
 
 void main() {
-  // Initialize random number generator and generate a random number between 1 and 100
   final random = Random();
   int targetNumber = random.nextInt(100) + 1;
 
@@ -28,12 +27,10 @@ void main() {
   print('Welcome to the Number Guessing Game!');
   print('Guess the number between 1 and 100.');
 
-  // Loop until the user guesses the correct number
   while (guess != targetNumber) {
     print('Enter your guess:');
     String? input = stdin.readLineSync();
     
-    // Validate and parse the input
     if (input == null) {
       print('Invalid input. Please enter a number.');
       continue;
@@ -46,7 +43,6 @@ void main() {
       continue;
     }
 
-    // Provide hints based on the guess
     attempts++;
     if (guess < targetNumber) {
       print('Too low! Try again.');
@@ -55,7 +51,6 @@ void main() {
     }
   }
 
-  // Congratulate the user and display the number of attempts
   print('Congratulations! You guessed the number $targetNumber.');
   print('It took you $attempts attempts to guess the correct number.');
 }

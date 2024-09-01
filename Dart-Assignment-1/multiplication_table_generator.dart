@@ -7,11 +7,10 @@ Following things should be covered in the program.
 import 'dart:io';
 
 void main() {
-  // Prompt the user to enter a number
+  
   print('Enter a number to generate its multiplication table:');
   int number = int.parse(stdin.readLineSync()!);
 
-  // Print the multiplication table
   print('Multiplication table for $number:');
   for (int i = 1; i <= 10; i++) {
     print('$number x $i = ${number * i}');

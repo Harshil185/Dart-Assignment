@@ -11,15 +11,13 @@ course.
 import 'dart:io';
 
 void main() {
-  // Prompt the user to enter the number of courses
+  
   print('Enter the number of courses:');
   int numCourses = int.parse(stdin.readLineSync()!);
 
-  // Initialize lists to store course names and grades
   List<String> courseNames = [];
   List<double> courseGrades = [];
 
-  // Collect course names and grades
   for (int i = 0; i < numCourses; i++) {
     print('Enter the name of course ${i + 1}:');
     String courseName = stdin.readLineSync()!;
@@ -31,11 +29,9 @@ void main() {
     courseGrades.add(courseGrade);
   }
 
-  // Calculate the average grade
   double totalGrade = courseGrades.reduce((a, b) => a + b);
   double averageGrade = totalGrade / numCourses;
 
-  // Display the results
   print('\nCourse Grades:');
   for (int i = 0; i < numCourses; i++) {
     print('${courseNames[i]}: ${courseGrades[i]}');

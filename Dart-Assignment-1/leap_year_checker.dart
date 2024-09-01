@@ -8,14 +8,12 @@ Following things should be covered in the program.
 import 'dart:io';
 
 void main() {
-  // Prompt the user to enter a year
+  
   print('Enter a year:');
   int year = int.parse(stdin.readLineSync()!);
 
-  // Check if the year is a leap year
   bool isLeapYear = (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
 
-  // Display the result
   if (isLeapYear) {
     print('$year is a leap year.');
   } else {
